@@ -28,4 +28,18 @@ public class Reservation {
 
 
     }
+
+
+    public double getPrice() {
+        double basePrice = roomType.equals("king") ? 139.00 : 124.00;
+        if (isWeekend) {
+            basePrice *= 1.10; // 10% increase
+        }
+        return basePrice;
+    }
+
+    public double getReservationTotal() {
+        return getPrice() * numberOfNights;
+    }
 }
+

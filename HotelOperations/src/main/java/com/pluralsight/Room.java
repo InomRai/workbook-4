@@ -35,4 +35,5 @@ public class Room {
         this.occupied = occupied;
         this.dirty = dirty;
     }
+
 }
